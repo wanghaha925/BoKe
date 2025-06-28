@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>豪华博客</title>
+  <script>
+    // GitHub Pages SPA 路由重定向
+    // 将所有路由重定向到 index.html，让 Vue Router 处理
+    const path = window.location.pathname.slice(1);
+    const base = '/luxury-blog/';
+    
+    if (path && !path.includes('.')) {
+      window.location.replace(
+        window.location.origin + base + '#/' + path + window.location.search + window.location.hash
+      );
+    }
+  </script>
+</head>
+<body>
+  <div style="text-align: center; padding: 50px; font-family: Arial, sans-serif;">
+    <h1>页面重定向中...</h1>
+    <p>如果页面没有自动跳转，请<a href="/luxury-blog/">点击这里</a>返回首页。</p>
+  </div>
+</body>
+</html>

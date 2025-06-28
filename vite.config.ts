@@ -15,4 +15,10 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
+  // GitHub Pages 部署配置
+  base: process.env.NODE_ENV === 'production' ? '/luxury-blog/' : '/',
+  build: {
+    outDir: 'dist',
+    assetsDir: 'assets',
+  }
 })
