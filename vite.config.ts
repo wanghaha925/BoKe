@@ -16,9 +16,10 @@ export default defineConfig({
     },
   },
   // GitHub Pages 部署配置
-  base: process.env.NODE_ENV === 'production' ? '/BoKe/' : '/',
+  base: process.env.DEPLOY_TARGET === 'GITHUB' ? '/BoKe/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
   }
 })
+
