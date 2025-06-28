@@ -15,8 +15,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  // 部署配置 - 自定义域名使用根路径
-  base: '/',
+  // 部署配置 - GitHub Pages路径
+  base: '/BoKe/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
