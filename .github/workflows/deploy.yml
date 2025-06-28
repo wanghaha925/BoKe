@@ -27,6 +27,7 @@ jobs:
       run: npm run build-prod
       env:
         NODE_ENV: production
+        DEPLOY_TARGET: GITHUB
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
