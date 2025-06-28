@@ -15,14 +15,11 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  // 部署配置
+  // GitHub Pages 部署配置
   base: process.env.DEPLOY_TARGET === 'GITHUB' ? '/BoKe/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
   }
 })
-
-
-
 
