@@ -16,7 +16,8 @@ export default defineConfig({
     },
   },
   // GitHub Pages 部署配置
-  base: process.env.DEPLOY_TARGET === 'GITHUB' ? '/BoKe/' : '/',
+  base: process.env.DEPLOY_TARGET === 'GITHUB_PAGES' ? '/BoKe/' :
+        process.env.DEPLOY_TARGET === 'CUSTOM_DOMAIN' ? '/' : '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',

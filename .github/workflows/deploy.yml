@@ -23,11 +23,11 @@ jobs:
         rm -rf node_modules package-lock.json
         npm install
 
-    - name: Build
-      run: npm run build-prod
+    - name: Build for Custom Domain
+      run: npm run build-custom
       env:
         NODE_ENV: production
-        DEPLOY_TARGET: GITHUB
+        CUSTOM_DOMAIN: nitaoge.dpdns.org
 
     - name: Deploy to GitHub Pages
       uses: peaceiris/actions-gh-pages@v3
