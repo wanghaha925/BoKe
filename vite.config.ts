@@ -15,9 +15,8 @@ export default defineConfig({
       '@': fileURLToPath(new URL('./src', import.meta.url))
     },
   },
-  // GitHub Pages 部署配置
-  base: process.env.DEPLOY_TARGET === 'GITHUB_PAGES' ? '/BoKe/' :
-        process.env.DEPLOY_TARGET === 'CUSTOM_DOMAIN' ? '/' : '/',
+  // 部署配置 - 自定义域名使用根路径
+  base: '/',
   build: {
     outDir: 'dist',
     assetsDir: 'assets',
